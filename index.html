@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" href="virus.png">
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Coronavirus</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="row">
+                <div class="col">
+                    <span>
+                        <h5><img src="virus.png" width="45px"> COVID-19 Dashboard</h5>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-3 col-lg-6 col-12">
+                <div class="card shadow mb-5 rounded bg-warning">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="align-self-center">
+                                    <div class="float-left">
+                                        <img src="user.png" width="60px">
+                                    </div>
+                                </div>
+                                <div class="media-body text-right">
+                                    <span class="simple" id="case"></span>
+                                    <h5 class="simple">Cases</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+                <div class="card shadow mb-5 rounded bg-primary">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="align-self-center">
+                                    <div class="float-left">
+                                        <img src="medicine.png" width="60px">
+                                    </div>
+                                </div>
+                                <div class="media-body text-right">
+                                    <span class="simple" id="active"></span>
+                                    <h5 class="simple">Active</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+                <div class="card shadow mb-5 rounded bg-success">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="align-self-center">
+                                    <div class="float-left">
+                                        <img src="muscle.png" width="50px">
+                                    </div>
+                                </div>
+                                <div class="media-body text-right">
+                                    <span class="simple" id="recovered"></span>
+                                    <h5 class="simple">Recovered</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-6 col-12">
+                <div class="card shadow mb-5 rounded bg-danger">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="align-self-center">
+                                    <div class="float-left">
+                                        <img src="skull.png" width="60px">
+                                    </div>
+                                </div>
+                                <div class="media-body text-right">
+                                    <span class="simple" id="deaths"></span>
+                                    <h5 class="simple">Deaths</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-8">
+                <div class="card shadow mb-5 rounded">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h5 style="font-size: 150%;">Country</h5>
+                                <span class="thailand" id="countries"></span>
+                                <iframe src="https://www.google.com/maps/d/embed?mid=1aITqcBuTzpH8DivC_DVSFPm9taT3_BZW"
+                                    width="100%" height="300"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card shadow mb-5 rounded">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media d-flex">
+                                        <div class="align-self-center">
+                                            <div class="float-left">
+                                                <img src="flu.png" width="60px">
+                                            </div>
+                                        </div>
+                                        <div class="media-body text-right">
+                                            <span class="waring" id="critical"></span>
+                                            <h5>Critical</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card shadow mb-5 rounded">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media d-flex">
+                                        <div class="align-self-center">
+                                            <div class="float-left">
+                                                <img src="bar-chart.png" width="60px">
+                                            </div>
+                                        </div>
+                                        <div class="media-body text-right">
+                                            <span class="waring" id="casesPerOneMillion"></span>
+                                            <h5>Casesperonemillion</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card shadow mb-5 rounded">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <div class="media d-flex">
+                                        <div class="align-self-center">
+                                            <div class="float-left">
+                                                <img src="death.png" width="60px">
+                                            </div>
+                                        </div>
+                                        <div class="media-body text-right">
+                                            <span class="danger" id="todaydeaths"></span>
+                                            <h5>Today deaths</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card shadow mb-5 rounded">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="align-self-center">
+                                    <div class="float-left">
+                                        <img src="mask.png" width="60px">
+                                    </div>
+                                </div>
+                                <div class="media-body text-right">
+                                    <span class="recovery" id="todaycase"></span>
+                                    <h5>Today case</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script>
+    const url = 'https://coronavirus-19-api.herokuapp.com/countries/thailand?fbclid=IwAR2x6HAD8bzPrZiBJsRgD8BLZroRZW6e-kfuQNZ8Zcp-xAz2AXXtxwYqrQE';
+    $(document).ready(async () => {
+        const data = await init();
+        console.log(data)
+        document.getElementById("countries").innerHTML = data.country;
+        document.getElementById("case").innerHTML = data.cases;
+        document.getElementById("todaycase").innerHTML = data.todayCases;
+        document.getElementById("deaths").innerHTML = data.deaths;
+        document.getElementById("todaydeaths").innerHTML = data.todayDeaths;
+        document.getElementById("recovered").innerHTML = data.recovered;
+        document.getElementById("active").innerHTML = data.active;
+        document.getElementById("critical").innerHTML = data.critical;
+        document.getElementById("casesPerOneMillion").innerHTML = data.casesPerOneMillion;
+    })
+    async function init() {
+        let response = await fetch(url);
+        if (response.ok) {
+            return await response.json();
+        } else {
+            return await response.status;
+        }
+    }
+</script>
+<style>
+    html,
+    body {
+        height: 100%;
+        color: #404E67;
+        background-color: rgb(235, 235, 235);
+    }
+
+    .header {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        margin-bottom: 10px;
+        border: none;
+    }
+
+    #case,
+    #active,
+    #recovered,
+    #deaths,
+    #countries,
+    #todaydeaths,
+    #todaycase,
+    #critical,
+    #casesPerOneMillion {
+        font-size: 150%
+    }
+
+    .simple {
+        color: #FFFFFF;
+    }
+
+    .waring {
+        color: orange;
+    }
+
+    .recovery {
+        color: #00B5B8;
+    }
+
+    .danger {
+        color: #FF7588;
+    }
+
+    .success {
+        color: #16D39A;
+    }
+
+    .thailand {
+        color: #00B5B8;
+    }
+</style>
+
+</html>
